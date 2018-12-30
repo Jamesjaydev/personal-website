@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>James Jannetti Portfolio</title>
+	<!-- Meta Tags -->
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="James Jannetti is a for hire professional Freelance Full Stack Web Developer skilled in HTML5, CSS3, JavaScript, and much more.">
+	<meta name="keywords" content="HTML,CSS,XML,JavaScript">
+	<meta name="author" content="James Jannetti">
+	<!-- Firebase App -->
+<script src="https://www.gstatic.com/firebasejs/5.7.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/5.7.0/firebase-database.js"></script>
+	<!-- Reset CSS -->
+	<link rel="stylesheet" type="text/css" href="reset.css">
+	<!-- Google Fonts -->
+	<link href="https://fonts.googleapis.com/css?family=Frank+Ruhl+Libre" rel="stylesheet">
+	<!-- CSS Style Sheets -->
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<!-- Scripts -->
+<!-- Typewriter -->
+	<script src="https://unpkg.com/typewriter-effect/dist/core.js"></script>
+<!-- 	<script src="comparison.js"></script> -->
+<!-- Jquery -->
+<script
+  src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
+<!-- Scroll Reveal -->
+	<script src="https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js"></script>
+
+</head>
+<body>
+	<header class="text_green background_center">
+		<div class="flex_header extra_space">
+			<div class="hamburger_icon">
+				<img src="assets/icons/IOS/hamburgerwhite.png" class="hamburger_icon_img pointer">
+			</div>
+			<div class="menu_logo">
+				<img src="assets/Logo/Standard Logo Files/green james logo color change.png" class="menu_logo_img pointer">
+			</div>
+			<ul class="header_tabs_list">
+				<li class="header_tabs inline pointer">Home</li>
+				<li class="header_tabs inline pointer">About</li>
+				<li class="header_tabs inline pointer">My Work</li>
+				<li class="header_tabs inline pointer">Services</li>
+				<li class="header_tabs inline pointer"><a href="#" class="anchor text_green">Contact</a></li>
+			</ul>
+			<div id="mySidenav" class="sidenav">
+  				<a href="javascript:void(0)" class="closebtn">&times;</a>
+  				<a href="#">About</a>
+  				<a href="#">Services</a>
+  				<a href="#">Clients</a>
+  				<a href="#">Contact</a>
+			</div>
+		</div>
+		<div id="menu_container" class="flex_align flex_column text_white">
+			<h1 id="menu_header" class="text_center text_white large_header"></h1>
+			<h3 class="sub_header text_white">Let's Build Your Story!</h3>
+			<div class="menu_button pointer text_center" style="margin-top: 48px;"><a href="#" class="text_white text_center">View My Work</a></div>
+		</div>
+	</header>
+	<div class="section_container_padding flex_align extra_space text_center extra_line" id="about_me">
+		<div class="text_block">
+			<h1 class="large_header bold">About Me</h1>
+			<p class="description">Before we begin to make your story, I feel It is important for me to tell you mine. My name is James and I'm a passionate Full-Stack Web Developer based out of New York City. I am skilled in languages such HTML5, CSS3, JavaScript, NodeJs, MongoDb/MySQL as well as development platforms such as Shopify and Wordpress. My mission is to build you a beautiful, sleek, and customizeable website that best explains your personal or business objectives to the online world. I have experience working with clients such as artists, entrepreneurs, and small/large businesses. I also am available for hire, whether it be temporary (project based) or permanent.</p>
+			<div style="margin-top: 48px;">
+				<a href="#" class="text_white text_center menu_button pointer text_center">Learn More</a>
+			</div>
+		</div>
+	</div>
+	<!-- My Work -->
+		<div class="section_container extra_space" id="work_container">
+		<h1 id="work_header" class="large_header text_center extra_space bold">My Work</h1>
+		<div class="work_images">
+			<div class="work_column column_one">
+				<div class="overlay_container">
+					<div class="work_image first_img pointer hover_animation"></div>
+					<div class="overlay_button_container small_overlay pointer">
+						<div class="overlay_button"><a href="https://randrjewelers.com/" class="text_white" target="_blank">R&R Jewelers</a></div>
+					</div>
+				</div>
+				<div class="overlay_container">
+					<div class="work_image second_img pointer hover_animation"></div>
+					<div class="overlay_button_container large_overlay pointer">
+						<div class="overlay_button"><a href="https://lababysitting.org/" class="text_white" target="_blank">L&A Babysitting</a></div>
+					</div>
+				</div>
+			</div>
+			<div class="work_column column_two">
+				<div class="overlay_container">
+					<div class="work_image third_img pointer hover_animation"></div>
+					<div class="overlay_button_container large_overlay pointer">
+						<div class="overlay_button"><a href="https://www.discovercasanova.com/" class="text_white" target="_blank">Discover Casanova</a></div>
+					</div>
+				</div>
+				<div class="overlay_container">
+					<div class="work_image fourth_img pointer hover_animation"></div>
+					<div class="overlay_button_container small_overlay pointer">
+						<div class="overlay_button" data-reference="https://lababysitting.org/"><a href="#" class="text_white">Hangman Game</a></div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<h1 class="large_header text_center extra_space bold">Services</h1>
+	</div>
+	  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none" id="cell_one_svg">
+    <polygon fill="#86c232" points="0,100 100,0 100,100"/>
+  </svg>
+	<!-- Services -->
+	<div class="section_container extra_space extra_line" id="cell_one">
+		<div class="services_cell flex">
+				<div class="icon_content">
+			<div class="icon_img">
+			<img src="assets/kisspng/shopify.png" class="responsive_img">
+			</div>
+			<h3 class="section_sub_header bold">Ecommerce/Shopify</h3>
+			<p>Are you a small/large business looking to capture a piece of the e-retail pie? With ecommerce sales on the rise, a fully functional/customizeable website for your store is key to maintaining and growing your business.</p>
+			<br>
+			<p>My ecommerce websites come loaded with robust functionality and mobile responsiveness. I can set-up/create accounts as well as apply CUSTOM ADMIN Settings to your shopify site/store!</p>
+		</div>
+		<div class="services_img">
+			<img src="assets/kisspng/glasses.png" class="responsive_img">
+		</div>
+	</div>
+</div>
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none" id="cell_two_svg">
+    <polygon fill="rgba(229,229,229)" points="0,100 100,0 100,100"/>
+  </svg>
+<div class="section_container extra_space extra_line" id="cell_two">
+	<div class="services_cell flex">
+		<div class="icon_content">
+			<div class="icon_img" id="wordpress_logo">
+			<img src="assets/kisspng/wordpressinline.png" class="responsive_img">
+			</div>
+			<h3 class="section_sub_header bold">Wordpress</h3>
+			<p>From subscription websites to personal blogs, Wordpress can do it all. It's one of the most powerful content management systems to date powering approximately 27% of all websites.</p>
+			<br>
+			<p>If you already have a Wordpress website and need extra functionality (or thinking of creating one from scratch) look no further! I have extensive experience designing/crafting wordpress sites as well asintegrating third party add ons/apps!</p>
+		</div>
+		<div class="services_img">
+			<img src="assets/kisspng/wordpresstheme.png" class="responsive_img">
+		</div>
+	</div>
+</div>
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none" id="cell_three_svg">
+    <polygon fill="#222629" points="0,100 100,0 100,100"/>
+  </svg>
+<div class="section_container extra_space extra_line" id="cell_three">
+	<div class="services_cell flex">
+		<div class="icon_content">
+			<div class="icon_img">
+			<img src="assets/kisspng/css.png" class="responsive_img">
+			</div>
+			<h3 class="section_sub_header bold">Personal Websites/Apps</h3>
+			<p>Powered by HTML, CSS, JavaScript, Nodejs, and more....A personal website/app coded from scratch can be anything you want, from simple to complex!</p>
+			<br>
+			<p>Ideal for musicians, photographers, freelancers, personal trainers, small businesses, and private/solo use.</p>
+		</div>
+		<div class="services_img">
+			<img src="assets/kisspng/allied.png" class="responsive_img">
+		</div>
+	</div>
+</div>
+<footer class="flex_align flex_column text_white">
+	<h3 class="section_sub_header bold text_center">Let's Talk!</h3>
+	<form>
+		<div>
+		<div class="form_label">
+  First name:
+</div>
+<div class="form_input">
+  <input type="text" name="firstname" id="first_name" value="" placeholder="First Name">
+</div>
+</div>
+<div class="hidden">
+  <div class="form_label">
+  Last name:
+</div>
+<div class="form_input">
+  <input type="text" name="lastname" id="last_name" value="" placeholder="Last Name">
+</div>
+</div>
+<div class="hidden">
+  <div class="form_label">
+  Email:
+</div>
+<div class="form_input">
+  <input type="email" name="emailaddress" id="email_address" value="" placeholder="your_story@gmail.com">
+</div>
+</div>
+<div class="hidden">
+<div class="form_label">
+	Type Of Website
+</div>
+<div class="form_input">
+	<select name="cars" id="website_type">
+    <option value="shopify">Shopfy</option>
+    <option value="wordpress">Wordpress</option>
+    <option value="personal">Small Business</option>
+    <option value="portfolio">Portfolio/Personal</option>
+    <option value="other-e">Other (Ecommerce)</option>
+    <option value="other">Other</option>
+  </select>
+</div>
+</div>
+<div class="hidden">
+  <div class="form_label">
+  Additional:
+</div>
+<div class="form_input">
+  <textarea name="comment" rows="10" cols="50" id="additional_info"></textarea>
+</div>
+</div>
+  <input type="submit" value="Submit" class="hidden" id="firebase_submit">
+</form> 
+<div class="footer_icons_container flex_row">
+	<div class="footer_icon">
+		<a href="#"><img src="assets/icons/programming-icons/facebook.png" class="responsive_img"></a>
+	</div>
+	<div class="footer_icon">
+		<a href="#"><img src="assets/icons/programming-icons/github.png" class="responsive_img"></a>
+	</div>
+	<div class="footer_icon">
+		<a href="#"><img src="assets/icons/programming-icons/Linkedin.png" class="responsive_img"></a>
+	</div>
+	<div class="footer_icon">
+		<a href="#"><img src="assets/icons/programming-icons/youtube.png" class="responsive_img"></a>
+	</div>
+</div>
+</footer>
+
+
+<!-- Main Js File -->
+<script src="main.js"></script>
+<script type="text/javascript">
+	ScrollReveal().reveal('.services_img', { delay: 500 });
+	ScrollReveal().reveal('.overlay_container', { delay: 500 });
+</script>
+</body>
+</html>

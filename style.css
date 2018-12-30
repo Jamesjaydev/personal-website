@@ -1,0 +1,484 @@
+/* Flex & Positioning 
+===========================================*/
+body{
+	font-family: 'Frank Ruhl Libre', serif;
+}
+a{
+	text-decoration: none;
+}
+.inline{
+	display: inline-block;
+}
+.flex{
+	display: -ms-flexbox; /* IE 10 */
+	display: flex;
+}
+.flex_row{
+	display: -ms-flexbox;
+	display: flex;
+	flex-direction: row;
+}
+.flex_align{
+	display: -ms-flexbox; /* IE 10 */
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.flex_wrap{
+	flex-wrap: wrap;
+}
+.flex_div{
+	display: -ms-flexbox; /* IE 10 */
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+.flex_header{
+	display: -ms-flexbox; /* IE 10 */
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 24px;
+}
+.flex_column{
+	flex-direction: column;
+}
+.text_left{
+	text-align: left;
+}
+.text_center{
+	text-align: center;
+}
+.button_container{
+	margin-top: 40px;
+}
+.responsive_img{
+	height: auto;
+	width: 100%;
+}
+.section_container_padding{
+	padding: 10% 120px 10% 120px;
+	position: relative;
+	    top: -3px;
+    margin-bottom: -1px;
+    margin-top: -1px;
+}
+.section_container{
+	padding: 10% 60px 10% 60px;
+	position: relative;
+	    top: -3px;
+    margin-bottom: -3px;
+    margin-top: -1px;
+}
+.section_header{
+	font-size: 4vw;
+	margin: 24px 0px 12px 0px;
+}
+
+/* Display/Colors 
+===========================================*/
+
+.bold{
+	font-weight: bold;
+}
+.pointer{
+	cursor: pointer;
+}
+.extra_space{
+	letter-spacing: 1.5px;
+}
+.extra_line{
+	line-height: 1.5;
+}
+.text_white{
+	color: white;
+}
+.text_green{
+	color: #86c232;
+}
+.large_header{
+	font-size: 40px;
+}
+.section_sub_header{
+	font-size: 2vw;
+}
+.hover_animation:hover{
+	transform: translate3d(0px, -20px, 0px);
+}
+.background_center{
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+/* Section Colors */
+#about_me{
+	
+}
+#cell_one{
+	background-color: rgba(229,229,229, 0.4);
+	background-color: #86c232;
+	color: white;
+}
+#cell_two{
+	background-color: rgba(229,229,229);
+}
+#cell_three{
+	background-color: #222629;
+	color: white;
+}
+
+/* Header/Menu Section 
+===========================================*/
+header{
+	height: 100vh;
+	background-image: 
+	linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+	url('https://images.unsplash.com/photo-1484807352052-23338990c6c6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80');
+	background-attachment: fixed;
+}
+.hamburger_icon{
+	display: none;
+}
+/* Mobile Side Nav */
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+  z-index: 100;
+}
+
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+#menu_container{
+	position: relative;
+	top: 150px;
+}
+.header_tabs{
+	padding: 12px;
+}
+.menu_logo_img{
+	height: 60px;
+}
+.sub_header{
+	margin-top: 48px;
+	font-size: 28px;
+}
+.menu_button{
+	background-color: #86c232;
+	color: white;
+	font-size: 16px;
+	padding: 16px 32px;
+	z-index: 10;
+	transition: 0.3s;
+}
+.menu_button:hover{
+	background-color: #6b9b28;
+}
+/* About Me Section
+===========================================*/
+.description{
+	margin-top: 24px;
+	padding: 0px 10%;
+}
+
+/* My Work Section 
+===========================================*/
+#work_container{
+	background-color: rgba(229,229,229, 0.2);
+}
+#work_header{
+	margin-bottom: 80px;
+}
+.work_images{
+	display: flex;
+	justify-content: center;
+}
+.work_column{
+	display: inline-block;
+	width: 45%;
+}
+.work_image{
+	margin: 24px;
+	background-position: center;
+	background-size: cover;
+	opacity: 1;
+	height: auto;
+	transition: .5s ease;
+	backface-visibility: hidden;
+	box-shadow: 0 16px 32px 0 rgba(0,0,0,0.2);
+}
+.first_img{
+	height: 400px;
+	background-image: url(assets/photos/randrjewelers.jpg);
+}
+.second_img{
+	height: 600px;
+	background-image: url(assets/photos/landababysitting.jpg);
+}
+.third_img{
+	height: 600px;
+	background-image: url(assets/photos/casanova.jpg);
+}
+.fourth_img{
+	height: 400px;
+	background-image: url(assets/photos/hangman.jpg);
+}
+/* Image Overlay Buttons */
+.overlay_button{
+	background-color: #86c232;
+	color: white;
+	font-size: 16px;
+	padding: 16px 32px;
+	text-align: center;
+	transition: 0.3s;
+}
+.overlay_button:hover{
+	background-color: #6b9b28;
+}
+.overlay_button_container{
+	transition: .5s ease;
+	opacity: 0;
+	position: relative;
+	left: 50%;
+	width: 34%;
+	transform: translate(-50%, -50%);
+	-ms-transform: translate(-50%, -50%);
+	text-align: center;
+}
+.large_overlay{
+	top: -320px;
+}
+.small_overlay{
+	top: -220px;
+}
+.overlay_container:hover .work_image{
+	opacity: 0.3;
+}
+.overlay_container:hover .overlay_button_container{
+	opacity: 1;
+}
+
+/* SERVICES SECTION 
+===========================================*/
+
+#services_container{
+	background-color: rgba(229,229,229, 0.2);
+}
+.icon_content{
+	padding: 48px;
+	width: 40%;
+}
+.icon_img{
+	width: 48%;
+}
+#wordpress_logo{
+	width: 62%;
+}
+.services_img{
+	width: 60%;
+	position: relative;
+	left: 24px;
+}
+
+/* Footer */
+footer{
+	background-color: #222629;
+	padding: 10% 120px 10% 120px;
+}
+.hidden{
+	display: none;
+}
+
+/* SVG */
+svg {
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  height: 10vw;
+  /* set height to pixels if you want angle to change with screen width */
+}
+#cell_one_svg{
+	background-color: rgba(229,229,229, 0.2);
+}
+#cell_two_svg{
+	background-color: #86c232;
+}
+#cell_three_svg{
+	background-color: rgba(229,229,229);
+}
+
+/* Footer Form */
+form {
+	text-align: center;
+	padding: 80px;
+}
+.form_input{
+	margin: 24px;
+	width: 500px;
+}
+input[type="email"], input[type=text], select, textarea{
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+input[type=submit] {
+  min-width: 20%;
+  background-color: #86c232;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+input[type=submit]:hover {
+  background-color: #6b9b28;
+}
+.footer_icons_container{
+	justify-content: center;
+}
+.footer_icon{
+	height: 48px;
+	width: 48px;
+	padding: 4%;
+}
+
+/* Media Queries */
+@media screen and (max-width: 980px){
+	.services_img{
+		width:90%;
+		left: 0px;
+	}
+	.services_cell.flex{
+		flex-direction: column-reverse;
+		justify-content: center;
+		align-items: center;
+	}
+	.icon_content{
+		width: 76%;
+	}
+	.section_sub_header{
+		font-size: 4vw;
+	}
+	.work_image{
+		height: 50vw !important;
+	}
+	.work_images{
+		display: block;
+	}
+	.work_column{
+		width: 100% !important;
+	}
+	.large_overlay{
+		top: -250px;
+	}
+}
+@media screen and (max-width: 768px){
+	.header_tabs_list{
+		display: none
+	}
+	.hamburger_icon{
+		display: inline-block;
+	}
+	.menu_logo_img{
+		height: 48px;
+	}
+	.flex_header.extra_space{
+		background-color: #86c232;
+		padding: 6px 24px;
+	}
+	.large_overlay, .small_overlay{
+		top: -180px;
+	}
+}
+@media screen and (max-width: 600px){
+	.icon_img{
+		width: 80%;
+	}
+	#wordpress_logo{
+		width: 100%;
+	}
+	.large_header{
+		font-size: 32px;
+		margin-top: 48px;
+	}
+	.sub_header{
+		font-size: 20px;
+	}
+	.section_sub_header{
+		font-size: 5.5vw;
+	}
+	.form_input{
+		width: 250px;
+	}
+	footer{
+		padding: 10% 0px;
+	}
+	form{
+		padding: 80px 0px;
+	}
+	.section_container_padding{
+		padding: 10% 12px;
+	}
+	.overlay_button_container{
+		width: 50%;
+	}
+}
+@media screen and (max-width: 430px){
+	header{
+	background-attachment: scroll;
+}
+.description{
+	text-align: left !important;
+}
+.section_sub_header{
+		font-size: 7vw;
+	}
+.services_img{
+		width: 100%;
+	}
+	.section_container{
+		padding: 10% 20px 10% 20px;
+	}
+	.large_overlay, .small_overlay{
+		top: -120px;
+	}
+}
+@media screen and (max-width: 368px){
+	.overlay_button_container{
+		width: 56%;
+	}
+}
