@@ -48,7 +48,6 @@ $(".scroll_button").click(function(event) {
     event.preventDefault();
 
     var scroll_source = $(this).attr("data-scroll");
-    console.log(scroll_source);
 
     $('html,body').animate({
         scrollTop: $(scroll_source).offset().top},
@@ -76,7 +75,6 @@ $input.on('keydown', function () {
 function doneTyping () {
   //do something
 $( ".hidden" ).each(function( index ) {
-  console.log( index + ": " + $( this ).text() );
   $(this).fadeIn('slow');
 });
 }
@@ -108,7 +106,6 @@ function data(){
   // Form Submit
 function FormSubmit(database,user_data){
     // Sending The Form Inputs to the db
-    console.log(user_data);
   database.ref('leads').push(user_data);
 }
 });
