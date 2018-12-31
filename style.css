@@ -140,6 +140,12 @@ header{
 .hamburger_icon{
 	display: none;
 }
+/* Logo Switch*/
+
+.hidden_logo{
+	display: none;
+}
+
 /* Mobile Side Nav */
 .sidenav {
   height: 100%;
@@ -412,6 +418,12 @@ input[type=submit]:hover {
 	}
 	.hamburger_icon{
 		display: inline-block;
+	}
+	.hidden_logo{
+	display: inline-block;
+	}
+	.shown_logo{
+		display: none;
 	}
 	.menu_logo_img{
 		height: 48px;
