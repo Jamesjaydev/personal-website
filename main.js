@@ -1,111 +1,112 @@
-$( document ).ready(function() {
+$(document).ready(function() {
 
     // Firebase Form Handler
-// Initialize Firebase
-  var config = {
-    apiKey: "AIzaSyC80YTA3E5OlnXQxCyteZ1sIlvKiC02gB8",
-    authDomain: "personal-site-530ed.firebaseapp.com",
-    databaseURL: "https://personal-site-530ed.firebaseio.com",
-    projectId: "personal-site-530ed",
-    storageBucket: "",
-    messagingSenderId: "997342755133",
-  };
-  firebase.initializeApp(config);
+    // Initialize Firebase
+    var config = {
+        apiKey: "AIzaSyC80YTA3E5OlnXQxCyteZ1sIlvKiC02gB8",
+        authDomain: "personal-site-530ed.firebaseapp.com",
+        databaseURL: "https://personal-site-530ed.firebaseio.com",
+        projectId: "personal-site-530ed",
+        storageBucket: "",
+        messagingSenderId: "997342755133",
+    };
+    firebase.initializeApp(config);
 
-// Typewriter Effect
+    // Typewriter Effect
 
-var app = document.getElementById('menu_header');
+    var app = document.getElementById('menu_header');
 
-var typewriter = new Typewriter(app, {
-    loop: false
-});
+    var typewriter = new Typewriter(app, {
+        loop: false
+    });
 
-typewriter.typeString('Hello! My Name Is James!')
-    .pauseFor(2000)
-    .deleteAll()
-    .typeString('I Build Custom Websites')
-    .pauseFor(2000)
-    .deleteChars(15)
-    .typeString('<strong>Ecommerce Sites</strong>')
-    .pauseFor(2000)
-    .deleteChars(15)
-    .typeString('<strong>Whatever You Need!</strong>')
-    .pauseFor(3000)
-    .start();
+    typewriter.typeString('Hello! My Name Is James!')
+        .pauseFor(2000)
+        .deleteAll()
+        .typeString('I Build Custom Websites')
+        .pauseFor(2000)
+        .deleteChars(15)
+        .typeString('<strong>Ecommerce Sites</strong>')
+        .pauseFor(2000)
+        .deleteChars(15)
+        .typeString('<strong>Whatever You Need!</strong>')
+        .pauseFor(3000)
+        .start();
 
-// Mobile Side Nav
-$('.hamburger_icon_img').on('click',function(){
-    document.getElementById("mySidenav").style.width = "250px";
-});
+    // Mobile Side Nav
+    $('.hamburger_icon_img').on('click', function() {
+        document.getElementById("mySidenav").style.width = "250px";
+    });
 
-$('.closebtn').on('click',function(){
-    document.getElementById("mySidenav").style.width = "0"; 
-});
+    $('.closebtn').on('click', function() {
+        document.getElementById("mySidenav").style.width = "0";
+    });
 
-// Scroll to Div on click
-$(".scroll_button").click(function(event) {
+    // Scroll to Div on click
+    $(".scroll_button").click(function(event) {
 
-    event.preventDefault();
+        event.preventDefault();
 
-    var scroll_source = $(this).attr("data-scroll");
+        var scroll_source = $(this).attr("data-scroll");
 
-    $('html,body').animate({
-        scrollTop: $(scroll_source).offset().top},
-        'slow');
-});
+        $('html,body').animate({
+                scrollTop: $(scroll_source).offset().top
+            },
+            'slow');
+    });
 
 
-//setup before functions
-var typingTimer;                //timer identifier
-var typeInterval = 150;  //time in ms, 5 second for example
-var $input = $('#first_name');
+    //setup before functions
+    var typingTimer; //timer identifier
+    var typeInterval = 150; //time in ms, 5 second for example
+    var $input = $('#first_name');
 
-//on keyup, start the countdown
-$input.on('keyup', function () {
-  clearTimeout(typingTimer);
-  typingTimer = setTimeout(doneTyping, typeInterval);
-});
+    //on keyup, start the countdown
+    $input.on('keyup', function() {
+        clearTimeout(typingTimer);
+        typingTimer = setTimeout(doneTyping, typeInterval);
+    });
 
-//on keydown, clear the countdown 
-$input.on('keydown', function () {
-  clearTimeout(typingTimer);
-});
+    //on keydown, clear the countdown 
+    $input.on('keydown', function() {
+        clearTimeout(typingTimer);
+    });
 
-//user is "finished typing," do something
-function doneTyping () {
-  //do something
-$( ".hidden" ).each(function( index ) {
-  $(this).fadeIn('slow');
-});
-}
-
-$("#firebase_submit").on('click',function(event){
-      // Get a reference to the database service
-    event.preventDefault();
-    data();
-});
-
-function data(){
-
-    var user_first_name = document.getElementById('first_name').value;
-    var user_last_name = document.getElementById('last_name').value;
-    var user_email = document.getElementById('email_address').value;
-    var user_website = document.getElementById('website_type').value;
-    var user_additional = document.getElementById('additional_info').value;
-
-    var user_data = {
-        First_Name: user_first_name,
-        Last_Name: user_last_name,
-        Email: user_email,
-        Website_Type: user_website,
-        Additional: user_additional
+    //user is "finished typing," do something
+    function doneTyping() {
+        //do something
+        $(".hidden").each(function(index) {
+            $(this).fadeIn('slow');
+        });
     }
-    var database = firebase.database();
-    FormSubmit(database,user_data);
-}
-  // Form Submit
-function FormSubmit(database,user_data){
-    // Sending The Form Inputs to the db
-  database.ref('leads').push(user_data);
-}
+
+    $("#firebase_submit").on('click', function(event) {
+        // Get a reference to the database service
+        event.preventDefault();
+        data();
+    });
+
+    function data() {
+
+        var user_first_name = document.getElementById('first_name').value;
+        var user_last_name = document.getElementById('last_name').value;
+        var user_email = document.getElementById('email_address').value;
+        var user_website = document.getElementById('website_type').value;
+        var user_additional = document.getElementById('additional_info').value;
+
+        var user_data = {
+            First_Name: user_first_name,
+            Last_Name: user_last_name,
+            Email: user_email,
+            Website_Type: user_website,
+            Additional: user_additional
+        }
+        var database = firebase.database();
+        FormSubmit(database, user_data);
+    }
+    // Form Submit
+    function FormSubmit(database, user_data) {
+        // Sending The Form Inputs to the db
+        database.ref('leads').push(user_data);
+    }
 });
