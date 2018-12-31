@@ -42,23 +42,23 @@
 			</div>
 			<ul class="header_tabs_list">
 				<li class="header_tabs inline pointer">Home</li>
-				<li class="header_tabs inline pointer">About</li>
-				<li class="header_tabs inline pointer">My Work</li>
-				<li class="header_tabs inline pointer">Services</li>
-				<li class="header_tabs inline pointer"><a href="#" class="anchor text_green">Contact</a></li>
+				<li class="header_tabs inline pointer scroll_button" data-scroll="#about_me">About</li>
+				<li class="header_tabs inline pointer scroll_button" data-scroll="#work_container">My Work</li>
+				<li class="header_tabs inline pointer scroll_button" data-scroll="#cell_one">Services</li>
+				<li class="header_tabs inline pointer"><a href="#" class="anchor text_green scroll_button" data-scroll="#contact_me">Contact</a></li>
 			</ul>
 			<div id="mySidenav" class="sidenav">
   				<a href="javascript:void(0)" class="closebtn">&times;</a>
-  				<a href="#">About</a>
-  				<a href="#">Services</a>
-  				<a href="#">Clients</a>
-  				<a href="#">Contact</a>
+  				<a href="#" class="scroll_button" data-scroll="#about_me">About</a>
+  				<a href="#" class="scroll_button" data-scroll="#cell_one">Services</a>
+  				<a href="#" class="scroll_button" data-scroll="#work_container">Work</a>
+  				<a href="#" class="scroll_button" data-scroll="#contact_me">Contact</a>
 			</div>
 		</div>
 		<div id="menu_container" class="flex_align flex_column text_white">
 			<h1 id="menu_header" class="text_center text_white large_header"></h1>
 			<h3 class="sub_header text_white">Let's Build Your Story!</h3>
-			<div class="menu_button pointer text_center" style="margin-top: 48px;"><a href="#" class="text_white text_center">View My Work</a></div>
+			<div class="menu_button pointer text_center" style="margin-top: 48px;"><a href="#" class="text_white text_center scroll_button" data-scroll="#work_container">View My Work</a></div>
 		</div>
 	</header>
 	<div class="section_container_padding flex_align extra_space text_center extra_line" id="about_me">
@@ -163,7 +163,7 @@
 		</div>
 	</div>
 </div>
-<footer class="flex_align flex_column text_white">
+<footer class="flex_align flex_column text_white" id="contact_me">
 	<h3 class="section_sub_header bold text_center">Let's Talk!</h3>
 	<form>
 		<div>

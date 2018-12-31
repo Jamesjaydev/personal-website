@@ -42,6 +42,18 @@ $('.closebtn').on('click',function(){
     document.getElementById("mySidenav").style.width = "0"; 
 });
 
+// Scroll to Div on click
+$(".scroll_button").click(function(event) {
+
+    event.preventDefault();
+
+    var scroll_source = $(this).attr("data-scroll");
+    console.log(scroll_source);
+
+    $('html,body').animate({
+        scrollTop: $(scroll_source).offset().top},
+        'slow');
+});
 
 
 //setup before functions
