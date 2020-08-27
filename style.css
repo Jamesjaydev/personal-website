@@ -290,12 +290,12 @@ header {
 
 .second_img {
     height: 600px;
-    background-image: url(assets/photos/landababysitting.jpg);
+    background-image: url(https://images.unsplash.com/photo-1441986300917-64674bd600d8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80);
 }
 
 .third_img {
     height: 600px;
-    background-image: url(assets/photos/casanova.jpg);
+    background-image: url(https://images.unsplash.com/photo-1551488831-00ddcb6c6bd3?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80);
 }
 
 .fourth_img {
